@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yustam | Email Confirmed</title>
+    <meta
+      name="description"
+      content="Your Yustam account is verified. You can safely close this tab and continue using the app."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --emerald: #0f6a53;
+        --emerald-accent: #0c4c3b;
+        --orange: #f3731e;
+        --surface: #ffffff;
+        --ink: #111827;
+        --muted: rgba(17, 24, 39, 0.7);
+        --bg: #f6eee6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background: radial-gradient(circle at top, rgba(15, 106, 83, 0.07), transparent 45%), var(--bg);
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .card {
+        width: min(520px, 100%);
+        padding: 48px 40px;
+        border-radius: 28px;
+        background: var(--surface);
+        box-shadow: 0 25px 60px rgba(17, 24, 39, 0.08);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(15, 106, 83, 0.1), rgba(243, 115, 30, 0.12));
+        opacity: 0.7;
+        z-index: 0;
+      }
+
+      .card > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(15, 106, 83, 0.08);
+        color: var(--emerald);
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      .title {
+        margin: 20px 0 12px;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        color: var(--emerald);
+      }
+
+      .subtitle {
+        color: var(--muted);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .note {
+        padding: 20px;
+        border-radius: 20px;
+        background: rgba(15, 106, 83, 0.08);
+        color: var(--emerald);
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 18px;
+      }
+
+      .support {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .support a {
+        color: var(--orange);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .support a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          padding: 36px 24px;
+          border-radius: 22px;
+        }
+
+        .badge {
+          font-size: 0.78rem;
+          padding: 6px 12px;
+        }
+
+        .title {
+          font-size: 1.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main">
+      <div class="badge" aria-live="polite">
+        <span aria-hidden="true">✔</span>
+        Email confirmed
+      </div>
+      <h1 class="title">You're all set</h1>
+      <p class="subtitle">
+        Thanks for verifying your Yustam account. Your account is now active and you
+        can safely close this tab.
+      </p>
+      <div class="note">
+        If the app didn’t refresh automatically, reopen Yustam and sign in with your
+        email address.
+      </div>
+      <p class="support">
+        Need help? <a href="mailto:support@yustam.com.ng">Contact support@yustam.com.ng</a>
+      </p>
+    </main>
+  </body>
+</html>
