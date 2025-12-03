@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/yustamco/public_html
+    - export DEPLOYPATH=/home2/yustamco/public_html
     - /bin/mkdir -p "$DEPLOYPATH"
     - /bin/find "$DEPLOYPATH" -mindepth 1 -maxdepth 1 ! -name "cgi-bin" -exec /bin/rm -rf {} +
     - /bin/cp -R ./ "$DEPLOYPATH"/
